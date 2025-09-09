@@ -1,0 +1,59 @@
+---
+const { 
+		title = 'ThreeSparks Digital', 
+		description = 'Innovative & creative software solutions', 
+		url = 'https://www.threesparks.digital' 
+	} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="canonical" href={url} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand">ThreeSparks Digital Pte Ltd</div>
+        <nav class="menu" id="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#why">Why Us</a>
+          <a href="#tech">Technologies</a>
+          <a href="#contact">Contact</a>
+          <a href="#sitemap">Sitemap</a>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="footer">
+      <div class="container" style="display:grid; gap:0.75rem; align-items:center;">
+        <div>© {new Date().getFullYear()} ThreeSparks Digital Pte Ltd. All rights reserved.</div>
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#why">Why Us</a>
+          <a href="#tech">Technologies</a>
+          <a href="#contact">Contact</a>
+          <a href="#sitemap">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/src/scripts/scroll.js" type="module"></script>
+  </body>
+</html>
