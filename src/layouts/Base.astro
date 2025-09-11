@@ -1,8 +1,10 @@
 ---
+import "../styles/global.css"
+
 const { 
 		title = 'ThreeSparks Digital', 
-		description = 'Innovative & creative software solutions', 
-		url = 'https://www.threesparks.digital' 
+		description = 'Software Development Singapore - Engineered to Ignite Brilliance', 
+		url = 'https://www.threesparksdigital.sg'
 	} = Astro.props;
 ---
 
@@ -11,15 +13,17 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <title>
+      { title }
+    </title>
+    <meta name="description" content={ description } />
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta property="og:title" content={ title } />
+    <meta property="og:description" content={ description } />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={ url } />
     <meta property="og:image" content="/og-image.png" />
-    <link rel="canonical" href={url} />
+    <link rel="canonical" href={ url } />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
