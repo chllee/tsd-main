@@ -29,7 +29,7 @@ const {
   </head>
   <body>
     <header class="header">
-      <div class="container nav">
+      <div class="head-container nav">
         <div class="brand">
           <img src="/nav_logo.svg" alt="ThreeSparks Digital Logo" class="logo">
         </div>
@@ -46,8 +46,8 @@ const {
     <slot />
 
     <footer class="footer">
-      <div class="container" style="display:grid; gap:0.75rem; align-items:center;">
-        <div>© {new Date().getFullYear()} ThreeSparks Digital Pte Ltd. All rights reserved.</div>
+      <div class="foot-container">
+        <div class="links">© {new Date().getFullYear()} ThreeSparks Digital Pte Ltd. All rights reserved.</div>
         <div class="links">
           <a href="#home">Home</a>
           <a href="#about">About</a>

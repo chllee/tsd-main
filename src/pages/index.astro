@@ -8,68 +8,61 @@ import Base from "../layouts/Base.astro";
   <main>
     <!-- HOME / WELCOME -->
     <section id="home" class="section">
-      <div class="container hero">
+      <div class="hero-box">
         <div>
-          <p class="small">Welcome to</p>
+          <p>Welcome to</p>
           <h1>ThreeSparks Digital — Engineered to Ignite Brilliance</h1>
-          <p class="lead">
+          <p class="herolead">
             Not your typical software agency. </br>
             At ThreeSparks Digital, we build products specifically engineered to serve your needs. </br>
             Every solution is carefully thought through right from the start, to ensure the final product sparks joy.
           </p>
-          <div class="cta">
-            <a class="button" href="#contact">Build With Us</a>
-            <a class="button ghost" href="#why">Why ThreeSparks</a>
-          </div>
           <div class="badges">
             <span class="badge">Web · Mobile · Integrations</span>
             <span class="badge">Custom · Automated · Efficient</span>
             <span class="badge">Cloud · DevOps</span>
           </div>
-        </div>
-        <div class="card">
-          <h3>What We Do</h3>
-          <p>
-            Full-Stack Engineering, User-Centered Design. </br>
-            Our deliverables are custom built with quality and security by default.
-          </p>
+          <div class="cta">
+            <a class="button" href="#contact">Build With Us</a>
+            <a class="button" href="#why">Why ThreeSparks</a>
+          </div>
         </div>
       </div>
     </section>
 
 	<!-- ABOUT -->
     <section id="about" class="section">
-      <div class="container">
+      <div class="about-box">
         <div class="abt-content">
           <h2>About us</h2>
           <p class="lead">
-            Unclear about what agencies are charging you for when it comes to development? Sick of not understanding how your own products and sites work?
-            That's us too. </br></br>
+            Unclear about what agencies are charging you for when it comes to development? </br>
+            Sick of not understanding how your own products and sites work?
+            That's us too. </br>
             Founded by 3 partners who had had enough of gatekeeping or not being able to help clients to their full potential, ThreeSparks Digital was founded with 
             the firm goal to ensure our clients feel safe entrusting their visions to us. </br>
           </p>
           <div class="abt-cards">
-            <div class="card"><h3>User-First DNA</h3>
+            <div class="abt-card"><h3>User-First DNA</h3>
               <p>
-                Smooth, Functional, A Joy to Use.
-              </p>
-              <p>
+                Smooth, Functional, A Joy to Use. </br>
                 At ThreeSparks, we firmly believe that the best solution is not the one 
                 that has the latest tech, but the one that serves its purpose without hiccups.
               </p>
             </div>
-            <div class="card"><h3>Custom Engineering</h3>
+            <div class="abt-card"><h3>Custom Engineering</h3>
               <p>
-                No Template Solutions. We only build software that does a specific job, and does it well.
-              </p>
-              <p>
+                No Template Solutions. </br>
+                We only build software that does a specific job, and does it well. </br>
                 With our firm belief that everything can be built with best practices, 
                 ThreeSparks endeavours to only deliver products that are clean, lean, and efficient.
               </p>
             </div>
-            <div class="card"><h3>Discovery for Maximum Impact</h3>
+            <div class="abt-card"><h3>Discovery for Maximum Impact</h3>
               <p>
-                Purpose Driven Problem Solving
+                Purpose Driven Problem Solving. </br>
+                Every solution starts with a need to solve an ongoing problem. At ThreeSparks, we pride 
+                ourselves in laying a good foundation to build upon. </br>
               </p>
             </div>
           </div>
@@ -86,18 +79,18 @@ import Base from "../layouts/Base.astro";
         <p class="lead">
           We Demystify Technology to Help You Ship, Navigate, and Scale.
         </p>
-        <div class="grid cols-3">
-          <div class="card"><h3>Transparency</h3>
+        <div class="why-cards">
+          <div class="why-card"><h3>Transparency</h3>
             <p>
               Clear Pricing. Full Access. Efficient Delivery.
             </p>
           </div>
-          <div class="card"><h3>Creativity that Works</h3>
+          <div class="why-card"><h3>Creativity that Works</h3>
             <p>
               Purpose-driven decision making. </br>
             </p>
           </div>
-          <div class="card"><h3>Language Agnostic, Future-Ready Builds</h3>
+          <div class="why-card"><h3>Language Agnostic, Future-Ready</h3>
             <p>
               Stable, Versatile, Flexible. </br>
               No Fluff - Only include what matters.
@@ -111,24 +104,24 @@ import Base from "../layouts/Base.astro";
     <section id="tech" class="section">
       <div class="technology">
         <h2>Technologies</h2>
-        <p class="lead">
+        <p class="tech-intro">
           We're pragmatic. We understand that every business has different needs, and different needs mean different stacks. </br>
           Depending on the requirements, and existing architecture, we may encourage certain technologies over others for various reasons.
         </p>
         <div class="tech-cards">
-          <div class="card">
+          <div class="tech-card">
             <h3>Frontend & Mobile Technologies</h3>
             <p>
               HTML5 · CSS · JavaScript · Tailwind CSS · Styled-Components · React · Vue · Angular · Astro · React Native · Flutter
             </p>
           </div>
-          <div class="card">
+          <div class="tech-card">
             <h3>Backend & Cloud Technologies</h3>
             <p>
               Node.js · Ruby · PHP · Java · PostgreSQL · MongoDB · Firebase · Google · AWS · Digital Ocean 
             </p>
           </div>
-          <div class="card">
+          <div class="tech-card">
             <h3>Full Stack Frameworks</h3>
             <p>
               Ruby on Rails · Laravel · MERN · Adonis · Django · Spring / SpringBoot
@@ -143,7 +136,7 @@ import Base from "../layouts/Base.astro";
         <h2>Contact us</h2>
         <p class="lead">Tell us about your project, and we'll get in touch as soon as we can.</p>
         <div class="ctc">
-          <div class="card">
+          <div class="form-card">
             <form id="contact-form" class="form" novalidate>
               <div>
                 <label for="name">Name</label>
@@ -155,19 +148,22 @@ import Base from "../layouts/Base.astro";
               </div>
               <div>
                 <label for="message">Project details</label>
-                <textarea class="textarea" id="message" name="message" required placeholder="What are you trying to build? Timeline? Budget?"></textarea>
+                <textarea class="textarea" id="message" name="message" required></textarea>
               </div>
-              <button class="button" type="submit">Send email</button>
-              <p class="small">This opens your mail app and drafts an email to <strong>hello@threesparks.digital</strong> with your details.</p>
+              <button class="button" type="submit">Submit</button>
             </form>
           </div>
           <div class="coy-card">
             <h3>ThreeSparks Digital Pte Ltd</h3>
             <p>Email: 
-              <a href="mailto:hello@threesparks.digital">hello@threesparks.digital</a>
+              <a href="mailto:hello@threesparks.digital">contactus@threesparksdigital.sg</a>
             </p>
-            <p>Phone: +65 8000 0000</p>
-            <p>Location: Singapore</p>
+            <p>
+              Address: </br>
+              12 WOODLANDS SQUARE, #13-79, WOODS SQUARE, </br>
+              SINGAPORE 737715
+            </p>
+            <p>Phone: +65 9397 8227</p>
           </div>
         </div>
       </div>
