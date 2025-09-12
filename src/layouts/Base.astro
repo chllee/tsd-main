@@ -17,7 +17,7 @@ const {
       { title }
     </title>
     <meta name="description" content={ description } />
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/logo_favicon.svg">
     <meta property="og:title" content={ title } />
     <meta property="og:description" content={ description } />
     <meta property="og:type" content="website" />
@@ -30,14 +30,15 @@ const {
   <body>
     <header class="header">
       <div class="container nav">
-        <div class="brand">ThreeSparks Digital Pte Ltd</div>
+        <div class="brand">
+          <img src="/nav_logo.svg" alt="ThreeSparks Digital Logo" class="logo">
+        </div>
         <nav class="menu" id="menu">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#why">Why Us</a>
           <a href="#tech">Technologies</a>
           <a href="#contact">Contact</a>
-          <a href="#sitemap">Sitemap</a>
         </nav>
       </div>
     </header>
@@ -53,7 +54,6 @@ const {
           <a href="#why">Why Us</a>
           <a href="#tech">Technologies</a>
           <a href="#contact">Contact</a>
-          <a href="#sitemap">Sitemap</a>
         </div>
       </div>
     </footer>
