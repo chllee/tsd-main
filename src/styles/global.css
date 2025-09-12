@@ -7,8 +7,8 @@
 
 :root {
   --max: 90%;
-  --fg: #f0f0f0;
-  --bg: #252525;
+  --white: #f0f0f0;
+  --black: #252525;
   --muted: #2561c9;
   --brand: #ff7900;
 }
@@ -24,11 +24,14 @@ html {
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--black);
+  color: var(--white);
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 1rem;
@@ -36,6 +39,26 @@ body {
 
 .section {
   padding: 4rem 0;
+}
+
+#home {
+  background-image: url("/main_hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Semi-transparent color + blend mode to darken the image */
+  background-color: rgba(0,0,0,0.8);
+  background-blend-mode: multiply; /* try overlay, screen, etc. */
+}
+
+#about {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#tech {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .section h2 {
@@ -46,6 +69,7 @@ body {
 .section p.lead {
   color: var(--fg);
   line-height: 1.5rem;
+  text-align: center;
   margin: 0.5rem 0 1.5rem;
 }
 
@@ -117,8 +141,6 @@ body {
 
 .badge {
   border: 1px solid var(--brand);
-  /* background: #102e6e;
-  color: white; */
   background: transparent;
   color: white;
   padding: 0.5rem 0.65rem;
@@ -157,6 +179,8 @@ body {
 }
 
 .card {
+  background-color: var(--brand);
+  color: black;
   border: 1px solid var(--brand);
   border-radius: 16px;
   padding: 1rem;
@@ -177,17 +201,87 @@ body {
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
   }
+}
 
-  .grid.cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* About */
+.abt-content {
+  width: 60%;
+}
 
-  .grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.abt-cards {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.abt-img {
+  background-image: url("/tech_point.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 600px;
+  border-radius: 2rem;
+}
+
+/* Why Us */
+#why {
+  background-image: url("/why_img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Semi-transparent color + blend mode to darken the image */
+  background-color: rgba(0,0,0,0.8);
+  background-blend-mode: multiply; /* try overlay, screen, etc. */
+}
+
+.whyus {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+/* Technology */
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-cards {
+  width: 90%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 1rem;
 }
 
 /* Contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctc {
+  height: 450px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coy-card {
+  height: 450px;
+  width: 35%;
+  background: transparent;
+  padding: 0.5rem;
+  border: 1px solid var(--brand);
+  border-radius: 1rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
