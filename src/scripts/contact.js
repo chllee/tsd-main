@@ -1,25 +1,30 @@
+// /src/scripts/contact.js
 const form = document.getElementById('contact-form');
-const PUB_EMAIL = 'hello@threesparks.digital'; // set your public email
 
-function encodeRFC3986(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, c => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: form.method || 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' } // DO NOT set Content-Type with FormData
+      });
+
+      if (res.ok) {
+        form.reset();
+        alert("Thanks! We'll be in touch shortly.");
+      } else {
+        const text = await res.text();
+        console.error('Formspree error:', res.status, text);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error. Please try again.");
+    }
+  });
 }
-
-form?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
-
-  if (!name || !email || !message) {
-    alert('Please fill in all fields.');
-    return;
-  }
-
-  const subject = `Project inquiry from ${name}`;
-  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AProject details:%0D%0A${message}`;
-  const mailto = `mailto:${PUB_EMAIL}?subject=${encodeRFC3986(subject)}&body=${body}`;
-
-  // Open in the same tab for more reliable behavior on mobile
-  window.location.href = mailto;
-});
